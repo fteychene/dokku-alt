@@ -7,6 +7,7 @@ DEB_REVISION := $(shell git rev-parse HEAD || cat REVISION || echo unknown)
 DEB_ARCH := amd64
 DEB_NAME ?= dokku-alt
 DEB_PKG := $(DEB_NAME)-$(DEB_VERSION)-$(DEB_ARCH).deb
+DOCKER_IMAGE_NAME := fteychene/dokku-alt
 
 .PHONY: all help dpkg install devinstall pull push sync
 
@@ -88,20 +89,20 @@ dpkg_beta:
 	make dpkg_commit DEB_NAME=dokku-alt-beta
 
 docker_build: FORCE
-	docker build -t ayufan/dokku-alt .
+	docker build -t $(DOCKER_IMAGE_NAME) .
 
 docker_run: docker_build
 	docker run --privileged --rm -i -t \
 		-v /home/dokku -v /var/lib/docker \
 		--hostname="dokku.me" \
-		ayufan/dokku-alt
+		$(DOCKER_IMAGE_NAME)
 
 docker_tests:
 	-docker run -v /var/lib/docker --name="dokku-alt-docker-volume-data" busybox:latest true
 	docker run --privileged --rm -i -t \
 		--volumes-from dokku-alt-docker-volume-data \
 		--hostname="dokku.me" \
-		ayufan/dokku-alt \
+		$(DOCKER_IMAGE_NAME) \
 		/srv/dokku-alt/tests/run_localhost $(TESTS)
 
 pull:
