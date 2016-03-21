@@ -1,9 +1,9 @@
 Package: dokku-alt
-Version: 0.3.1
+Version: 0.4.0
 Section: base
 Priority: optional
 Architecture: amd64
-Depends: locales, git, make, curl, software-properties-common, man-db, docker-engine (>= 1.10.0-0~trusty), nginx, dnsutils, linux-image-extra-virtual, aufs-tools, apache2-utils
+Depends: locales, git, make, curl, software-properties-common, man-db, docker-engine (>= 1.10.0-0~trusty), nginx, dnsutils, aufs-tools, apache2-utils
 Provides: dokku-alt
-Maintainer: Kamil Trzciński <ayufan@ayufan.eu>
-Description: Docker powered mini-Heroku an fork of Dokku the Dokku Alternative.
+Maintainer: Francois Teychene <francois.teychene@gmail.com>
+Description: Fork of dokku-alt : Docker powered mini-Heroku an fork of Dokku the Dokku Alternative.

@@ -1,5 +1,5 @@
 DOKKU_ROOT ?= /home/dokku
-SIGN_KEY ?= EAD883AF
+SIGN_KEY ?= D4F981E6
 
 DEB_BRANCH := $(shell git rev-parse --abbrev-ref HEAD || cat BRANCH || echo master)
 DEB_VERSION := $(shell git describe --tags || cat VERSION || echo 0.0)
