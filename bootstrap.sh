@@ -8,10 +8,10 @@ if [ ! -e /usr/lib/apt/methods/https ]; then
 fi
 
 echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
-echo deb https://dokku-alt.github.io/dokku-alt / > /etc/apt/sources.list.d/dokku-alt.list
+echo deb http://fteychene.github.io/dokku-alt / > /etc/apt/sources.list.d/dokku-alt.list
 
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
-apt-key adv --keyserver keys.gnupg.net --recv-keys EAD883AF
+apt-key adv --keyserver keys.gnupg.net --recv-keys D4F981E6
 apt-get update -y
 
 if [[ -t 0 ]]; then
