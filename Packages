@@ -411,6 +411,23 @@ Priority: optional
 Section: base
 Maintainer: Francois Teychene <francois.teychene@gmail.com>
 Architecture: amd64
+Version: 0.6.0
+Provides: dokku-alt
+Depends: locales, git, make, curl, software-properties-common, man-db, docker-engine (>= 1.10.0-0~trusty), nginx, dnsutils, aufs-tools, apache2-utils
+Conflicts: pluginhook, dokku-alt-beta
+Filename: ./dokku-alt-0.6.0-amd64.deb
+Size: 446722
+MD5sum: 523d9a52ef5c16def854385d377f734a
+SHA1: 09bea70fec2719b7e10fb5fefc03ceeac030ab0a
+SHA256: 88e834a48fffee1d5c3473984333c4b3d7c907cab41f82dbc3ed6e8f0cc4c4eb
+SHA512: 4d455c18b610addbf6909a5471994e51a541a355e1b592cc206b0b7b7c8b2b2683b7d01e4313360efee91e5c5a29466760399df6dbc004c461930783507b2ccc
+Description: Fork of dokku-alt : Docker powered mini-Heroku an fork of Dokku the Dokku Alternative.
+
+Package: dokku-alt
+Priority: optional
+Section: base
+Maintainer: Francois Teychene <francois.teychene@gmail.com>
+Architecture: amd64
 Version: 0.4.0-2-gb2cae33
 Provides: dokku-alt
 Depends: locales, git, make, curl, software-properties-common, man-db, docker-engine (>= 1.10.0), nginx, dnsutils, aufs-tools, apache2-utils
