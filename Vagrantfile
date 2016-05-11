@@ -27,7 +27,8 @@ Vagrant::configure("2") do |config|
   config.vm.provision :shell, :inline => "apt-get update -qq"
   config.vm.provision :shell, :inline => "apt-get install -y apt-transport-https git"
   config.vm.provision :shell, :inline => "apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9"
-  config.vm.provision :shell, :inline => "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+  config.vm.provision :shell, :inline => "apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D"
+  config.vm.provision :shell, :inline => "echo deb https://apt.dockerproject.org/repo ubuntu-trusty main > /etc/apt/sources.list.d/docker.list"
   config.vm.provision :shell, :inline => "apt-get update -qq"
 
   # Install dokku-alt
